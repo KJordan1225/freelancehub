@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\MyJob;
 
 class MyJobsController extends Controller
 {
@@ -27,7 +28,22 @@ class MyJobsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the request data
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:16777215',
+            'budget' => 'required|integer',
+        ]);
+        
+        // Create a new FormData model and save the data
+        $formData = new MyJob();
+        $formData->title = $validatedData['title'];
+        $formData->description = $validatedData['description'];
+        $formData->budget = $validatedData['budget'];
+        $formData->save();				
+
+        // Redirect or return response
+        return redirect()->back()->with('success', 'Job created successfully!');
     }
 
     /**
