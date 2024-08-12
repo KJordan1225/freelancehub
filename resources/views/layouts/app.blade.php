@@ -85,10 +85,12 @@
                                 
                                 if($User->hasRole('Client')){
                                     $Menu ['/postjob'] = 'Post a Job';
+                                    $Menu ['/editjob'] = 'Edit a Job';
                                 }
                                 
                                 if($User->hasRole('Freelancer')){
                                     $Menu ['/findjob'] = 'Find a Job';
+                                    $Menu ['/postservice'] = 'Post a Service';
                                 }					
                             }
 
