@@ -96,14 +96,14 @@
 
                             $usermenu = $Menu;
 
-                        @endphp
+                        @endphp                    
+					<ul>                                        
+                        @if (count($usermenu) >= 1)
+                            @foreach ($usermenu as $Link => $MenuItem)
+                                <a href="{{$Link}}"><li>{{$MenuItem}}</li></a>
+                            @endforeach
+                        @endif
                     @endif
-					<ul>                    
-					@if (count($usermenu) >= 1)
-						@foreach ($usermenu as $Link => $MenuItem)
-							<a href="{{$Link}}"><li>{{$MenuItem}}</li></a>
-						@endforeach
-					@endif
 					</ul>
 				</div>			
 				<div class="col-10">
