@@ -84,7 +84,7 @@
                                 $Menu['/home'] = 'Dashboard'; 
                                 
                                 if($User->hasRole('Client')){
-                                    $Menu ['/postjob'] = 'Post a Job';
+                                    $Menu ['/jobs/create'] = 'Post a Job';
                                     $Menu ['/editjob'] = 'Edit a Job';
                                 }
                                 
