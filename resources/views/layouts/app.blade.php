@@ -89,7 +89,7 @@
                                 }
                                 
                                 if($User->hasRole('Freelancer')){
-                                    $Menu ['/findjob'] = 'Find a Job';
+                                    $Menu ['/jobs'] = 'Find a Job';
                                     $Menu ['/postservice'] = 'Post a Service';
                                 }					
                             }
