@@ -71,9 +71,31 @@
                 </div>
             </div>
         </nav>
+        
         <div class="container-flex">
 			<div class="row">
 				<div class="col-2">
+                    @if (auth()->check())
+                        @php 
+                            $Menu = array();                
+                            $User = auth()->user();
+
+                            if(!is_null($User)) {
+                                $Menu['/home'] = 'Dashboard'; 
+                                
+                                if($User->hasRole('Client')){
+                                    $Menu ['/postjob'] = 'Post a Job';
+                                }
+                                
+                                if($User->hasRole('Freelancer')){
+                                    $Menu ['/findjob'] = 'Find a Job';
+                                }					
+                            }
+
+                            $usermenu = $Menu;
+
+                        @endphp
+                    @endif
 					<ul>                    
 					@if (count($usermenu) >= 1)
 						@foreach ($usermenu as $Link => $MenuItem)
@@ -82,14 +104,14 @@
 					@endif
 					</ul>
 				</div>			
-				<div class="col-8">
+				<div class="col-10">
 					<main class="py-4">
 						@yield('content')
 					</main>				
 				</div>				
-				<div class="col-2">
+				<!-- <div class="col-1">
 				
-				</div>
+				</div> -->
 			</div>
 		</div>
     </div>

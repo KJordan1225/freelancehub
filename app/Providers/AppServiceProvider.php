@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\MenuController;
+use Illuminate\Support\Facades\Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,13 +22,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $UserMenu = app('App\Http\Controllers\MenuController')->getUserMenu();
-
-        View::share('usermenu', $UserMenu);
-        
-        // View()->composer('*', function($view) {
-        //     $UserMenu = app('App\Http\Controllers\MenuController')->getUserMenu();
-        //     $view()->with('usermenu',$UserMenu);
-        // });
+        //
     }
 }

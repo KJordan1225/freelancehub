@@ -11,9 +11,8 @@ class MenuController extends Controller
     public function getUserMenu() {
 	
         $Menu = array();
-        
-        // $User = Auth::user();
-        $User = User::find(2);
+                
+        $User = Auth::user();
         
         if(!is_null($User)) {
             $Menu['/home'] = 'Dashboard'; 
