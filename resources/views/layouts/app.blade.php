@@ -71,10 +71,27 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+        <div class="container-flex">
+			<div class="row">
+				<div class="col-2">
+					<ul>                    
+					@if (count($usermenu) >= 1)
+						@foreach ($usermenu as $Link => $MenuItem)
+							<a href="{{$Link}}"><li>{{$MenuItem}}</li></a>
+						@endforeach
+					@endif
+					</ul>
+				</div>			
+				<div class="col-8">
+					<main class="py-4">
+						@yield('content')
+					</main>				
+				</div>				
+				<div class="col-2">
+				
+				</div>
+			</div>
+		</div>
     </div>
 </body>
 </html>
