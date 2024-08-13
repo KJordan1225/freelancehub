@@ -11,7 +11,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="icon" href="{{asset('assets/images/favicon.png') }}" type="image/x-icon">
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/normalize.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/scrollbar.css') }}">
@@ -48,7 +48,7 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<strong class="wt-logo"><a href="index-2.html"><img src="images/logo.png" alt="company logo here"></a></strong>
+								<strong class="wt-logo"><a href="index-2.html"><img src="{{asset('assets/images/logo.png') }}" alt="company logo here"></a></strong>
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +129,7 @@
 									</nav>
 									<div class="wt-loginarea">
 										<figure class="wt-userimg">
-											<img src="images/user-login.png" alt="img description">
+											<img src="{{asset('assets/images/user-login.') }}" alt="img description">
 										</figure>
 										<div class="wt-loginoption">
 											<a href="javascript:void(0);" id="wt-loginbtn" class="wt-loginbtn">Login</a>
@@ -188,85 +188,128 @@
 										</div>
 										<nav class="wt-usernav">
 											<ul>
-												<li class="menu-item-has-children page_item_has_children">
-													<a href="javascript:void(0);">
-														<span>Insights</span>
-													</a>
-													<ul class="sub-menu children">
-														<li><a href="dashboard-insights.html">Insights</a></li>
-														<li><a href="dashboard-insightsuser.html">Insights User</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="dashboard-profile.html">
-														<span>My Profile</span>
-													</a>
-												</li>
-												<li class="menu-item-has-children">
-													<a href="javascript:void(0);">
-														<span>All Jobs</span>
-													</a>
-													<ul class="sub-menu">
-														<li><a href="dashboard-completejobs.html">Completed Jobs</a></li>
-														<li><a href="dashboard-canceljobs.html">Cancelled Jobs</a></li>
-														<li><a href="dashboard-ongoingjob.html">Ongoing Jobs</a></li>
-														<li><a href="dashboard-ongoingsingle.html">Ongoing Single</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="dashboard-managejobs.html">
-														<span>Manage Jobs</span>
-													</a>
-												</li>
-												<li class="wt-notificationicon menu-item-has-children">
-													<a href="javascript:void(0);">
-														<span>Messages</span>
-													</a>
-													<ul class="sub-menu">
-														<li><a href="dashboard-messages.html">Messages</a></li>
-														<li><a href="dashboard-messages2.html">Messages V 2</a></li>
-													</ul>
-												</li>
-												<li>
-													<a href="dashboard-saveitems.html">
-														<span>My Saved Items</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-invocies.html">
-														<span>Invoices</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-category.html">
-														<span>Category</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-packages.html">
-														<span>Packages</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-proposals.html">
-														<span>Proposals</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-accountsettings.html">
-														<span>Account Settings</span>
-													</a>
-												</li>
-												<li>
-													<a href="dashboard-helpsupport.html">
-														<span>Help &amp; Support</span>
-													</a>
-												</li>
-												<li>
-													<a href="index-2.html">
-														<span>Logout</span>
-													</a>
-												</li>
+
+
+
+											@if (Route::has('login'))
+												<!-- <nav class="-mx-3 flex flex-1 justify-end"> -->
+													@auth
+														<li>
+														<a
+															href="{{ url('/home') }}"
+															class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+														>
+															Dashboard
+														</a>
+														</li>
+
+														<li class="menu-item-has-children page_item_has_children">
+															<a href="javascript:void(0);">
+																<span>Insights</span>
+															</a>
+															<ul class="sub-menu children">
+																<li><a href="dashboard-insights.html">Insights</a></li>
+																<li><a href="dashboard-insightsuser.html">Insights User</a></li>
+															</ul>
+														</li>
+														<li>
+															<a href="dashboard-profile.html">
+																<span>My Profile</span>
+															</a>
+														</li>
+														<li class="menu-item-has-children">
+															<a href="javascript:void(0);">
+																<span>All Jobs</span>
+															</a>
+															<ul class="sub-menu">
+																<li><a href="dashboard-completejobs.html">Completed Jobs</a></li>
+																<li><a href="dashboard-canceljobs.html">Cancelled Jobs</a></li>
+																<li><a href="dashboard-ongoingjob.html">Ongoing Jobs</a></li>
+																<li><a href="dashboard-ongoingsingle.html">Ongoing Single</a></li>
+															</ul>
+														</li>
+														<li>
+															<a href="dashboard-managejobs.html">
+																<span>Manage Jobs</span>
+															</a>
+														</li>
+														<li class="wt-notificationicon menu-item-has-children">
+															<a href="javascript:void(0);">
+																<span>Messages</span>
+															</a>
+															<ul class="sub-menu">
+																<li><a href="dashboard-messages.html">Messages</a></li>
+																<li><a href="dashboard-messages2.html">Messages V 2</a></li>
+															</ul>
+														</li>
+														<li>
+															<a href="dashboard-saveitems.html">
+																<span>My Saved Items</span>
+															</a>
+														</li>
+														<li>
+															<a href="dashboard-invocies.html">
+																<span>Invoices</span>
+															</a>
+														</li>
+														<li>
+															<a href="dashboard-category.html">
+																<span>Category</span>
+															</a>
+														</li>
+														<li>
+															<a href="dashboard-packages.html">
+																<span>Packages</span>
+															</a>
+														</li>
+														<li>
+															<a href="dashboard-proposals.html">
+																<span>Proposals</span>
+															</a>
+														</li>
+														<li>
+															<a href="dashboard-accountsettings.html">
+																<span>Account Settings</span>
+															</a>
+														</li>
+														<li>
+															<a href="dashboard-helpsupport.html">
+																<span>Help &amp; Support</span>
+															</a>
+														</li>
+														<li>
+															<a href="index-2.html">
+																<span>Logout</span>
+															</a>
+														</li>
+														
+													@else
+														<li>
+														<a
+															href="{{ route('login') }}"
+															class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+														>
+															Log in
+														</a>
+														</li>
+
+														@if (Route::has('register'))
+															<li>
+															<a
+																href="{{ route('register') }}"
+																class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+															>
+																Register
+															</a>
+															</li>
+														@endif
+													@endauth
+												<!-- </nav> -->
+											@endif
+
+
+
+												
 											</ul>
 										</nav>
 									</div>
@@ -284,9 +327,9 @@
 						<div class="col-12 col-sm-12 col-md-12 col-lg-5">
 							<div class="wt-bannerimages">
 								<figure class="wt-bannermanimg" data-tilt>
-									<img src="images/bannerimg/img-01.png" alt="img description">
-									<img src="images/bannerimg/img-02.png" class="wt-bannermanimgone" alt="img description">
-									<img src="images/bannerimg/img-03.png" class="wt-bannermanimgtwo" alt="img description">
+									<img src="{{asset('assets/images/bannerimg/img-01.png') }}" alt="img description">
+									<img src="{{asset('assets/images/bannerimg/img-02.png') }}" class="wt-bannermanimgone" alt="img description">
+									<img src="{{asset('assets/images/bannerimg/img-03.png') }}" class="wt-bannermanimgtwo" alt="img description">
 								</figure>
 							</div>
 						</div>
@@ -719,7 +762,7 @@
 	<script src="{{asset('assets/js/readmore.js') }}"></script>
 	<script src="{{asset('assets/js/countTo.js') }}"></script>
 	<script src="{{asset('assets/js/appear.js') }}"></script>
-	<script src="{{asset('assets//tipso.js') }}"></script>
+	<script src="{{asset('assets/js/tipso.js') }}"></script>
 	<script src="{{asset('assets/js/jRate.js') }}"></script>
 	<script src="{{asset('assets/js/main.js') }}"></script>
 </body>
