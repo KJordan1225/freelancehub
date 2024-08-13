@@ -3,6 +3,13 @@
 @section('content')
     <h2>Create a Job</h2>
 
+    <!-- Display success message -->
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <div class="col-9">
         <form action="{{ route('jobs.store') }}" method="POST">
             @csrf				
