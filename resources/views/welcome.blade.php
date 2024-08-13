@@ -48,7 +48,8 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<strong class="wt-logo"><a href="index-2.html"><img src="{{asset('assets/images/logo.png') }}" alt="company logo here"></a></strong>
+								<!-- <strong class="wt-logo"><a href="index-2.html"><img src="{{asset('assets/images/logo.png') }}" alt="company logo here"></a></strong> -->
+								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>EmpowerHer Market</h4></a></strong>
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -179,6 +180,7 @@
 										<a href="register.html" class="wt-btn">Join Now</a>
 									</div>
 									<div class="wt-userlogedin">
+										@auth
 										<figure class="wt-userimg">
 											<img src="images/user-img.jpg" alt="image description">
 										</figure>
@@ -186,6 +188,13 @@
 											<h3>Louanne Mattioli</h3>
 											<span>Amento Tech</span>
 										</div>
+										@else
+										<div class="wt-username">
+											<!-- <h3>Louanne Mattioli</h3> -->
+											<span>Access Site Features</span>
+										</div>
+										@endauth
+
 										<nav class="wt-usernav">
 											<ul>
 
@@ -327,9 +336,9 @@
 						<div class="col-12 col-sm-12 col-md-12 col-lg-5">
 							<div class="wt-bannerimages">
 								<figure class="wt-bannermanimg" data-tilt>
-									<img src="{{asset('assets/images/bannerimg/img-01.png') }}" alt="img description">
-									<img src="{{asset('assets/images/bannerimg/img-02.png') }}" class="wt-bannermanimgone" alt="img description">
-									<img src="{{asset('assets/images/bannerimg/img-03.png') }}" class="wt-bannermanimgtwo" alt="img description">
+									<img src="{{asset('assets/images/custom/hero-banner/frontpage-banner1.jpg') }}" style="height:300px;" alt="img description">
+									<!-- <img src="{{asset('assets/images/bannerimg/img-02.png') }}" class="wt-bannermanimgone" alt="img description">
+									<img src="{{asset('assets/images/bannerimg/img-03.png') }}" class="wt-bannermanimgtwo" alt="img description"> -->
 								</figure>
 							</div>
 						</div>
@@ -337,10 +346,10 @@
 							<div class="wt-bannercontent">
 								<div class="wt-bannerhead">
 									<div class="wt-title">
-										<h1><span>Hire expert freelancers</span> for any job, Online</h1>
+										<h1>Hire expert local black female freelancers for any job, Online</h1>
 									</div>
 									<div class="wt-description">
-										<p>Consectetur adipisicing elit sed dotem eiusmod tempor incuntes ut labore etdolore maigna aliqua enim.</p>
+										<p>EmpowerHer Market: Your Destination for Local Black Women-Owned Excellence!</p>
 									</div>
 								</div>
 								<form class="wt-formtheme wt-formbanner">
@@ -401,9 +410,21 @@
 							<div class="wt-categoryexpl">
 								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
 									<div class="wt-categorycontent">
-										<figure><img src="images/categories/img-01.png" alt="image description"></figure>
+										<figure><img src="{{asset('assets/images/custom/hairsalon-logo.png') }}" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Mobiles</a></h3>
+											<h3><a href="javascrip:void(0);">Hair Styling</a></h3>
+										</div>
+										<div class="wt-categoryslidup">
+											<p>Transform Your Hair, Transform Your Life: Elevate Your Style with Top-Tier Freelance Stylists!</p>
+											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
+									<div class="wt-categorycontent">
+										<figure><img src="{{asset('assets/images/custom/nailsalon-logo.png') }}" alt="image description"></figure>
+										<div class="wt-cattitle">
+											<h3><a href="javascrip:void(0);">Nail Craft</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
@@ -413,9 +434,9 @@
 								</div>
 								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
 									<div class="wt-categorycontent">
-										<figure><img src="images/categories/img-08.png" alt="image description"></figure>
+										<figure><img src="{{asset('assets/images/custom/catering1-logo.jpg') }}" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Digital Marketing</a></h3>
+											<h3><a href="javascrip:void(0);">Food &amp; Catering</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
@@ -425,9 +446,9 @@
 								</div>
 								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
 									<div class="wt-categorycontent">
-										<figure><img src="images/categories/img-02.png" alt="image description"></figure>
+										<figure><img src="{{asset('assets/images/custom/house-cleaning-logo.jpg') }}" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Writing &amp; Translation</a></h3>
+											<h3><a href="javascrip:void(0);">House Cleaning</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
@@ -437,9 +458,9 @@
 								</div>
 								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
 									<div class="wt-categorycontent">
-										<figure><img src="images/categories/img-03.png" alt="image description"></figure>
+										<figure><img src="{{asset('assets/images/custom/carwash-logo.jpg') }}" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Video &amp; Animation</a></h3>
+											<h3><a href="javascrip:void(0);">Car Detailing</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
@@ -449,9 +470,9 @@
 								</div>
 								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
 									<div class="wt-categorycontent">
-										<figure><img src="images/categories/img-04.png" alt="image description"></figure>
+										<figure><img src="{{asset('assets/images/custom/babysitting-logo.jpg') }}" alt="image description"></figure>
 										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Music &amp; Audio</a></h3>
+											<h3><a href="javascrip:void(0);">Baby/Pet Sitting</a></h3>
 										</div>
 										<div class="wt-categoryslidup">
 											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
@@ -459,20 +480,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
-									<div class="wt-categorycontent">
-										<figure><img src="images/categories/img-05.png" alt="image description"></figure>
-										<div class="wt-cattitle">
-											<h3><a href="javascrip:void(0);">Programming &amp; Tech</a></h3>
-										</div>
-										<div class="wt-categoryslidup">
-											<p>Consectetur adipisicing elitaed eiusmod tempor incididuatna labore et dolore magna.</p>
-											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left">
-									<div class="wt-categorycontent">
+								<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 float-left"> -->
+									<!-- <div class="wt-categorycontent">
 										<figure><img src="images/categories/img-06.png" alt="image description"></figure>
 										<div class="wt-cattitle">
 											<h3><a href="javascrip:void(0);">Business</a></h3>
@@ -494,7 +503,7 @@
 											<a href="javascript:void(0);">Explore <i class="fa fa-arrow-right"></i></a>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="col-12 col-sm-12 col-md-12 col-lg-12 float-left">
 									<div class="wt-btnarea">
 										<a href="javascript:void(0)" class="wt-btn">View All</a>
@@ -545,7 +554,7 @@
 						<div class="row">
 							<div class="col-12 col-sm-12 col-md-6 col-lg-6 float-left">
 								<figure class="wt-mobileimg">
-									<img src="images/mobile-img.png" alt="img description">
+									<img src="{{asset('assets/images/mobile-img.png') }}" alt="img description">
 								</figure>
 							</div>
 							<div class="col-12 col-sm-12 col-md-6 col-lg-6 float-left">
@@ -562,12 +571,12 @@
 										<ul class="wt-appicon">
 											<li>
 												<a href="javascript:void(0)">
-													<figure><img src="images/app-icon/img-01.png" alt="img description"></figure>
+													<figure><img src="{{asset('assets/images/app-icon/img-01.png') }}" alt="img description"></figure>
 												</a>
 											</li>
 											<li>
 												<a href="javascript:void(0)">
-													<figure><img src="images/app-icon/img-02.png" alt="img description"></figure>
+													<figure><img src="{{asset('assets/images/app-icon/img-02.png') }}" alt="img description"></figure>
 												</a>
 											</li>
 										</ul>
@@ -667,7 +676,8 @@
 						<div class="row">
 							<div class="col-12 col-sm-12 col-md-6 col-lg-6">
 								<div class="wt-footerlogohold">
-									<strong class="wt-logo"><a href="index-2.html"><img src="images/flogo.png" alt="company logo here"></a></strong>
+									<!-- <strong class="wt-logo"><a href="index-2.html"><img src="images/flogo.png" alt="company logo here"></a></strong> -->
+									<strong class="wt-logo"><a href="{{url('/')}}"><h5 style="color: red;">EmpowerHer Market</h5></a></strong>
 									<div class="wt-description">
 										<p>Dotem eiusmod tempor incune utnaem labore etdolore maigna aliqua enim poskina ilukita ylokem lokateise ination voluptate velit esse cillum dolore eu fugiat nulla pariatur lokaim urianewce <a href="javascript:void(0);">more...</a></p>
 									</div>
