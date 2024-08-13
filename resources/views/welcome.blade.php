@@ -182,7 +182,7 @@
 									<div class="wt-userlogedin">
 										@auth
 										<figure class="wt-userimg">
-											<img src="images/user-img.jpg" alt="image description">
+											<img src="{{asset('assets/images/user-img.jpg') }}" alt="image description">
 										</figure>
 										<div class="wt-username">
 											<h3>Louanne Mattioli</h3>
