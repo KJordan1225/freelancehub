@@ -8,7 +8,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BootStrap HTML5 CSS3 Theme</title>
+	<title>EmpowerHer Market</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -363,11 +363,11 @@
 					<div class="row justify-content-md-center">
 						<div class="col-xs-12 col-sm-12 col-md-8 push-md-2 col-lg-6 push-lg-3">
 							<div class="wt-innerbannercontent">
-							<div class="wt-title"><h2>New Articles</h2></div>
-							<ol class="wt-breadcrumb">
+							<div class="wt-title"><h2>EmpowerHer Market</h2></div>
+							<!-- <ol class="wt-breadcrumb">
 								<li><a href="index-2.html">Home</a></li>
 								<li class="wt-active">Articles</li>
-							</ol>
+							</ol> -->
 							</div>
 						</div>
 					</div>
