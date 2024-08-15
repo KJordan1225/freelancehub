@@ -18,6 +18,10 @@ class MyJob extends Model
         'title',
         'description',
         'budget',
+        'job_experience',
+        'job_pay_type',
+        'job_duration',
+        'user_id',
     ];
 
     public $timestamps = true;
