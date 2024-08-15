@@ -13,3 +13,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/jobs', [App\Http\Controllers\MyJobsController::class, 'index'])->name('jobs.index');
 Route::post('/jobs/store', [App\Http\Controllers\MyJobsController::class, 'store'])->name('jobs.store');
 Route::get('/jobs/create', [App\Http\Controllers\MyJobsController::class, 'create'])->name('jobs.create');
+
+// Search Routes
+Route::post('/search', [App\Http\Controllers\SearchController::class, 'do'])->name('search.do');
+

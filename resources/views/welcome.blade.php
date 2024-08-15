@@ -352,7 +352,10 @@
 										<p>EmpowerHer Market: Your Destination for Local Black Women-Owned Excellence!</p>
 									</div>
 								</div>
-								<form class="wt-formtheme wt-formbanner">
+								<form class="wt-formtheme wt-formbanner" 
+									ib="searchform" action="{{ route('search.do') }}" 
+									method="POST">
+									@csrf
 									<fieldset>
 										<div class="form-group">
 											<input type="text" name="fullname" class="form-control" placeholder="I’m looking for">
@@ -370,16 +373,17 @@
 														<label for="wt-jobs">Jobs</label>
 													</span>
 													<span class="wt-radio">
-														<input id="wt-company"  data-title="Companies" type="radio" name="searchtype" value="job">
+														<input id="wt-company"  data-title="Services" type="radio" name="searchtype" value="services">
 														<!-- <label for="wt-company">Companies</label> -->
 														<label for="wt-company">Services</label>
 													</span>
 												</div>
-												<a href="#" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></a>
+												<!-- <a href="#" class="wt-searchbtn" id="searchbtn"><i class="lnr lnr-magnifier"></i></a> -->
+												<button type="submit" name="search" class="wt-searchbtn" id="searchbtn">Search</button>
 											</div>
 										</div>
 									</fieldset>
-								</form>
+								</form>								
 								<div class="wt-videoholder">
 									<div class="wt-videoshow">
 										<a data-rel="prettyPhoto[video]" href="https://www.youtube.com/watch?v=J37W6DjqT3Q"><i class="fa fa-play"></i></a>
@@ -589,7 +593,7 @@
 				</section>
 				<!--Limitless Experience End-->
 				<!--Skills Start-->
-				<section class="wt-haslayaout wt-main-section wt-footeraboutus">
+				<!-- <section class="wt-haslayaout wt-main-section wt-footeraboutus">
 					<div class="container">
 						<div class="row">
 							<div class="col-12 col-sm-6 col-md-3 col-lg-3">
@@ -666,7 +670,7 @@
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> -->
 				<!--Skills Start End-->
 			</main>
 			<!--Main End-->
@@ -680,7 +684,7 @@
 									<!-- <strong class="wt-logo"><a href="index-2.html"><img src="images/flogo.png" alt="company logo here"></a></strong> -->
 									<strong class="wt-logo"><a href="{{url('/')}}"><h5 style="color: red;">EmpowerHer Market</h5></a></strong>
 									<div class="wt-description">
-										<p>Dotem eiusmod tempor incune utnaem labore etdolore maigna aliqua enim poskina ilukita ylokem lokateise ination voluptate velit esse cillum dolore eu fugiat nulla pariatur lokaim urianewce <a href="javascript:void(0);">more...</a></p>
+										<p>EmpowerHer is flipping the script on the freelance game! This vibrant, dynamic marketplace is designed exclusively for African-American female entrepreneurs ready to break the glass ceiling. Dive into a world where your creativity and talent get the spotlight they deserve. Join a sisterhood that celebrates your journey and empowers you to reach new heights. Don’t just freelance—flourish with EmpowerHer!</p>
 									</div>
 									<ul class="wt-socialiconssimple wt-socialiconfooter">
 										<li class="wt-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook-f"></i></a></li>
@@ -760,6 +764,15 @@
 		</div>
 		<!--Content Wrapper End-->
 	</div>
+
+	<script>
+		document.getElementById('submitbtn').addEventListener('click', function(e) {
+			e.preventDefault(); // Prevent the default anchor behavior
+			window.alert("Submit search form!");
+			document.getElementById('searchform').submit(); // Submit the form
+		});
+	</script>
+
 	<!--Wrapper End-->
 	<script src="{{asset('assets/js/vendor/jquery-3.3.1.js') }}"></script>
 	<script src="{{asset('assets/js/vendor/jquery-library.js') }}"></script>
