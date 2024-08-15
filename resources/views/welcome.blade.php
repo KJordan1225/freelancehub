@@ -11,7 +11,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="{{asset('assets/images/custom/favicon/favicon.png') }}" type="image/x-icon">
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/normalize.css') }}">
 	<link rel="stylesheet" href="{{asset('assets/css/scrollbar.css') }}">
@@ -371,10 +371,11 @@
 													</span>
 													<span class="wt-radio">
 														<input id="wt-company"  data-title="Companies" type="radio" name="searchtype" value="job">
-														<label for="wt-company">Companies</label>
+														<!-- <label for="wt-company">Companies</label> -->
+														<label for="wt-company">Services</label>
 													</span>
 												</div>
-												<a href="userlisting.html" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></a>
+												<a href="#" class="wt-searchbtn"><i class="lnr lnr-magnifier"></i></a>
 											</div>
 										</div>
 									</fieldset>
