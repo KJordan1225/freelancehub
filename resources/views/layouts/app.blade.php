@@ -132,7 +132,7 @@
 													<a href="javascript:void(0);">Browse Jobs</a>
 													<ul class="sub-menu">
 														<li>
-															<a href="joblisting.html">Job Listing</a>
+															<a href="{{ url('/jobs') }}">Job Listing</a>
 														</li>
 														<li class="current-menu-item">
 															<a href="jobsingle.html">Job Single</a>

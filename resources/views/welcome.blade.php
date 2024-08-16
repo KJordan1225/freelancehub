@@ -365,7 +365,7 @@
 												</div>
 												<div class="wt-radioholder">
 													<span class="wt-radio">
-														<input id="wt-freelancers" data-title="Freelancers" type="radio" name="searchtype" value="freelancer" checked>
+														<input id="wt-freelancers" data-title="Freelancers" type="radio" name="searchtype" value="freelancer" checked="checked">
 														<label for="wt-freelancers">Freelancers</label>
 													</span>
 													<span class="wt-radio">

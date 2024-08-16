@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Nodels\User;
 use App\Models\MyJob;
 use App\Models\Service;
@@ -20,11 +21,13 @@ class SearchController extends Controller
 
             switch ($searchtype) {
                 case "freelancer":
-                    $results = User::where('name','%like%',$searchterm);
+                    $results = DB::table('my_jobs')->where('name','%like%',$searchterm);
                     break;
                 case "job":
-                    $results = MyJob::where('title','%like%',$searchterm);
-                    return view('my_jobs.index');
+                    $results = MyJob::all();
+                    // $results = MyJob::Paginate(2);
+                    return view('my_jobs.index', compact('results'))->with('success','Search results listed below');
+                    // return redirect('/jobs', compact('results'));                    
                     break;
                 case "services":
                     // $results = Service::where('title','%like%',$searchterm);
@@ -36,7 +39,7 @@ class SearchController extends Controller
 
         }       
         
-        return view('my_jobs.index');
+        
 
     }
 }

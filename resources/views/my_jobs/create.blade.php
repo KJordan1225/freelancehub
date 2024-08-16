@@ -35,18 +35,18 @@
             <div class="form-group">
                 <label for="job_experience">Job Level</label>
                 <select name="job_experience" id="job_experience">
-                    <option value="professional" selected>Professional</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="entrty_levek">Entry Level</option>
+                    <option value="Professional" selected>Professional</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Entrty Level">Entry Level</option>
                 </select>
             </div>
 
             <!-- Pay Type Textfield -->
             <div class="form-group">
                 <label for="job_pay_type">Job Pay type</label>
-                <select name="job_experience" id="job_experience">
-                    <option value="fixed" selected>Fixed</option>
-                    <option value="hourly">Hourly</option>
+                <select name="job_pay_type" id="job_pay_type">
+                    <option value="Fixed" selected>Fixed</option>
+                    <option value="Hourly">Hourly</option>
                 </select>
             </div>
 

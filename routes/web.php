@@ -15,5 +15,5 @@ Route::post('/jobs/store', [App\Http\Controllers\MyJobsController::class, 'store
 Route::get('/jobs/create', [App\Http\Controllers\MyJobsController::class, 'create'])->name('jobs.create');
 
 // Search Routes
-Route::post('/search', [App\Http\Controllers\SearchController::class, 'do'])->name('search.do');
+Route::any('/search', [App\Http\Controllers\SearchController::class, 'do'])->name('search.do');
 
