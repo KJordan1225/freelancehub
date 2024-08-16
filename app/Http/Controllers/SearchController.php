@@ -24,10 +24,11 @@ class SearchController extends Controller
                     $results = DB::table('my_jobs')->where('name','%like%',$searchterm);
                     break;
                 case "job":
-                    $results = MyJob::all();
-                    // $results = MyJob::Paginate(2);
-                    return view('my_jobs.index', compact('results'))->with('success','Search results listed below');
-                    // return redirect('/jobs', compact('results'));                    
+                    // $results_1 = MyJob::all();
+                    $results_1 = MyJob::Paginate(2);
+                    // dd($results_1);
+                    // return view('my_jobs.index', compact('results'))->with('success','Search results listed below');
+                    return redirect()->route('jobs.index', compact('results_1'));                    
                     break;
                 case "services":
                     // $results = Service::where('title','%like%',$searchterm);
@@ -37,9 +38,6 @@ class SearchController extends Controller
                     break;
             }
 
-        }       
-        
-        
-
+        }   
     }
 }

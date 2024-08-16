@@ -352,7 +352,7 @@
 										<p>EmpowerHer Market: Your Destination for Local Black Women-Owned Excellence!</p>
 									</div>
 								</div>
-								<form class="wt-formtheme wt-formbanner" 
+								<!-- <form class="wt-formtheme wt-formbanner" 
 									ib="searchform" action="{{ route('search.do') }}" 
 									method="POST">
 									@csrf
@@ -373,17 +373,15 @@
 														<label for="wt-jobs">Jobs</label>
 													</span>
 													<span class="wt-radio">
-														<input id="wt-company"  data-title="Services" type="radio" name="searchtype" value="services">
-														<!-- <label for="wt-company">Companies</label> -->
+														<input id="wt-company"  data-title="Services" type="radio" name="searchtype" value="services">														
 														<label for="wt-company">Services</label>
 													</span>
 												</div>
-												<!-- <a href="#" class="wt-searchbtn" id="searchbtn"><i class="lnr lnr-magnifier"></i></a> -->
 												<button type="submit" name="search" class="wt-searchbtn" id="searchbtn">Search</button>
 											</div>
 										</div>
 									</fieldset>
-								</form>								
+								</form>	-->
 								<div class="wt-videoholder">
 									<div class="wt-videoshow">
 										<a data-rel="prettyPhoto[video]" href="https://www.youtube.com/watch?v=J37W6DjqT3Q"><i class="fa fa-play"></i></a>

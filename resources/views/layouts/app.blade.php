@@ -51,7 +51,7 @@
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<!-- <strong class="wt-logo"><a href="index-2.html"><img src="images/logo.png" alt="company logo here"></a></strong> -->
 								<strong class="wt-logo"><a href="{{ url('/') }}"><h4>EmpowerHer Market</h4></a></strong>
-                                <form class="wt-formtheme wt-formbanner wt-formbannervtwo">
+                                <!-- <form class="wt-formtheme wt-formbanner wt-formbannervtwo">
 									<fieldset>
 										<div class="form-group">
 											<input type="text" name="job" class="form-control" placeholder="I’m looking for">
@@ -77,7 +77,7 @@
 											</div>
 										</div>
 									</fieldset>
-								</form>
+								</form> -->
 								<div class="wt-rightarea">
 									<nav id="wt-nav" class="wt-nav navbar-expand-lg">
 										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

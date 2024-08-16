@@ -13,9 +13,9 @@ class MyJobsController extends Controller
      * Display a listing of the resource.
      */
     public function index() 
-    {
+    {      
         $results = MyJob::all();
-        return view('my_jobs.index', compact('results'));
+        return view('my_jobs.index', compact('results'));        
     }
 
     /**
