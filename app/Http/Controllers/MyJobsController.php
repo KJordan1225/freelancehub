@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\MyJob;
 use App\Models\Role;
-use \Auth;
+use App\Models\MyJob;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MyJobsController extends Controller
 {
